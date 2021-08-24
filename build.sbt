@@ -18,6 +18,7 @@ val ScalaTestVersion = "3.2.3"
 val ScalaTestPlusVersion = "3.2.2.0"
 val HoconVersion = "1.2.0"
 val ScoptVersion = "4.0.1"
+val TofuVersion = "0.10.3"
 
 
 libraryDependencies ++= Seq(
@@ -30,8 +31,10 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-parser" % CirceVersion,
   "io.circe" %% "circe-config" % CirceConfigVersion,
   "ch.qos.logback" % "logback-classic" % LogbackVersion,
+  "tf.tofu" %% "tofu-core" % TofuVersion,
   "org.scalacheck" %% "scalacheck" % ScalaCheckVersion % Test,
   "org.scalatest" %% "scalatest" % ScalaTestVersion % Test,
   "org.scalatestplus" %% "scalacheck-1-14" % ScalaTestPlusVersion % Test,
+  "org.typelevel" %% "cats-testkit-scalatest" % "2.1.5" % Test,
   "com.github.scopt" %% "scopt" % ScoptVersion
 )
